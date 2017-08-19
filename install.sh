@@ -6,9 +6,9 @@ npm install
 echo "Would you like to run Gulp now? (y/N)"
 read ANSWER
 clear
-if ["$ANSWER" = "y"]; then
+if [ "$ANSWER" = "y" ] ; then
 	gulp
-elif [["$ANSWER" = "N" ]]; then
+elif [ "$ANSWER" = "y" ] ; then
 	exit
 else 
 	echo "Invalid Option! Exitting."
