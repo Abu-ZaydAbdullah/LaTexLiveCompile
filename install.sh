@@ -1,14 +1,15 @@
 #bin/bash
-npm init 
-npm install gulp --save-dev
-npm install gulp-shell --save-dev
-npm install 
+echo "Installing Gulp."
+npm install gulp --save-dev > /dev/null 2>&1
+echo "Installing Gulp-Shell."
+npm install gulp-shell --save-dev > /dev/null 2>&1
+clear
 echo "Would you like to run Gulp now? (y/N)"
 read ANSWER
 clear
 if [ "$ANSWER" = "y" ] ; then
 	gulp
-elif [ "$ANSWER" = "y" ] ; then
+elif [ "$ANSWER" = "N" ] ; then
 	exit
 else 
 	echo "Invalid Option! Exitting."
